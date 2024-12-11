@@ -42,6 +42,18 @@
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
+
+            <x-secondary-button class="ms-3">
+                {{ __('Register') }}
+            </x-secondary-button>
+
+
+            <div class="flex items-center justify-between mt-6">
+            <!-- Back Button -->
+            <a href="/" class="text-sm text-gray-600 hover:text-gray-900 underline">
+                {{ __('Home') }}
+            </a>
+        </div>
         </div>
     </form>
 </x-guest-layout>

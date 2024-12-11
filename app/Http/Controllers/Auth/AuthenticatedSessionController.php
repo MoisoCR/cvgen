@@ -30,7 +30,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         // Redirige a la página principal (index)
-        return redirect()->intended(route('index', absolute: false));  // Redirige a '/index'
+        return redirect()->intended(route('resumes.index', absolute: false));  // Redirige a '/index'
     }
 
     /**

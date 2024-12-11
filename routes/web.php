@@ -6,11 +6,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 Route::get('/', function () {
-    return redirect()->route('resumes.index'); // Redirige a la lista de currículums
+    return view('home'); //return redirect()->route('resumes.index'); // Redirige a la lista de currículums
 });
+// return view('home'); // Carga la vista 'home'
 
 // Ruta para la página de índice (se asocia al controlador IndexController)
-Route::get('/index', [IndexController::class, 'index'])->name('index');
+Route::get('/home', [ResumeController::class, 'home']); // Ruta principal
 Route::resource('resumes', ResumeController::class); // CRUD
 
 // Otras rutas de autenticación
