@@ -26,9 +26,11 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
 
+        // Regenera la sesión del usuario
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        // Redirige a la página principal (index)
+        return redirect()->intended(route('index', absolute: false));  // Redirige a '/index'
     }
 
     /**
@@ -39,7 +41,6 @@ class AuthenticatedSessionController extends Controller
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
         return redirect('/');
