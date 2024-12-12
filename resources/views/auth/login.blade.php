@@ -43,14 +43,14 @@
                 {{ __('Log in') }}
             </x-primary-button>
 
-            <x-secondary-button class="ms-3">
+            <x-secondary-button class="ms-3" onclick="window.location.href='{{ route('register') }}'">
                 {{ __('Register') }}
             </x-secondary-button>
 
 
             <div class="flex items-center justify-between mt-6">
             <!-- Back Button -->
-            <a href="/" class="text-sm text-gray-600 hover:text-gray-900 underline">
+            <a href="/" class="ml-4 text-sm text-gray-600 hover:text-gray-900 underline">
                 {{ __('Home') }}
             </a>
         </div>
