@@ -11,11 +11,17 @@
     <nav class="bg-blue-600 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="{{ url('/') }}" class="text-white text-lg font-semibold">Mi App</a>
-
+    
             <div>
                 @auth
                     <a href="{{ route('home') }}" class="text-white px-4">Inicio</a>
-                    <a href="{{ route('logout') }}" class="text-white px-4">Cerrar sesión</a>
+                    <!-- Formulario para cerrar sesión -->
+                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <button type="submit" class="text-white px-4 hover:underline">
+                            Cerrar sesión
+                        </button>
+                    </form>
                 @else
                     <a href="{{ route('login') }}" class="text-white px-4">Iniciar sesión</a>
                     <a href="{{ route('register') }}" class="text-white px-4">Registrar</a>
