@@ -21,6 +21,11 @@ return new class extends Migration
             $table->text('skills');
             $table->text('languages');
             $table->timestamps();
+
+            Schema::table('resumes', function (Blueprint $table) {
+                $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relación con usuarios
+            });
+
         });
     }
     
@@ -31,5 +36,11 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('resumes');
+
+        Schema::table('resumes', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
+        });
+
     }
 };

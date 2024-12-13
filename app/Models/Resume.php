@@ -18,5 +18,13 @@ class Resume extends Model
         'experience', 
         'skills',
         'languages',
+        'user_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }
