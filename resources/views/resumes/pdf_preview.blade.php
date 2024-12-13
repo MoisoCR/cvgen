@@ -24,6 +24,12 @@
         <h2 class="text-xl font-bold mb-2">Habilidades</h2>
         <p>{{ $resume->skills }}</p>
     </div>
+
+    <div class="mt-4">
+        <h2 class="text-xl font-bold mb-2">Idiomas</h2>
+        <p>{{ $resume->languages }}</p>
+    </div>
+
     <div class="text-center mt-6">
         <a href="{{ route('resumes.export', $resume->id) }}" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Exportar PDF</a>
     </div>

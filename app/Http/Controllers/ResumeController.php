@@ -31,6 +31,7 @@ class ResumeController extends Controller
             'education' => 'required|string|max:500',
             'experience' => 'required|string|max:500',
             'skills' => 'required|string|max:500',
+            'languages' => 'required|string|max:500',
         ]);
     
         // Crear el currículum
@@ -67,6 +68,7 @@ class ResumeController extends Controller
             'education' => 'required|string|max:500',
             'experience' => 'required|string|max:500',
             'skills' => 'required|string|max:500',
+            'languages' => 'required|string|max:500',
         ]);
 
         $resume = Resume::findOrFail($id);
@@ -93,6 +95,13 @@ class ResumeController extends Controller
         // Descargar el PDF
         return $pdf->download('curriculum_'.$resume->name.'.pdf');
     }
+
+    public function previewPDF($id)
+{
+    $resume = Resume::findOrFail($id);
+    $isPreview = true; // Indicar que es una previsualización
+    return view('resumes.pdf', compact('resume', 'isPreview'));
+}
 
 }
 

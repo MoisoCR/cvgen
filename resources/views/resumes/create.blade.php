@@ -33,6 +33,11 @@
             <textarea id="skills" name="skills" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
         </div>
 
+        <div>
+            <label for="languages" class="block text-sm font-medium text-gray-700">Idiomas</label>
+            <textarea id="languages" name="languages" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+
         <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Generar Currículum</button>
     </form>
 </div>

@@ -7,10 +7,10 @@
     <a href="{{ route('resumes.create') }}" class="inline-block bg-indigo-600 text-white py-2 px-4 rounded-md mb-4 hover:bg-indigo-700">Crear Nuevo Currículum</a>
     <table class="min-w-full table-auto">
         <thead>
-            <tr class="bg-gray-100">
+            <tr class="text-gray-800 dark:text-gray-100">
                 <th class="px-4 py-2 text-left">Nombre</th>
                 <th class="px-4 py-2 text-left">Correo Electrónico</th>
-                <th class="px-4 py-2 text-left">Acciones</th>
+                <th class="px-4 py-2 text-left">Telefono</th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +30,11 @@
                     
                     <!-- Botón para exportar a PDF -->
                     <a href="{{ route('resumes.export', $resume->id) }}" class="text-green-500 hover:underline">Exportar a PDF</a>
+
+                    <a href="{{ route('resumes.preview', $resume->id) }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                        Ver Previsualización
+                    </a>
+
                 </td>
             </tr>
             @endforeach

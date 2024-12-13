@@ -120,6 +120,14 @@
                     <p>{{ $resume->skills }}</p>
                 </div>
             </div>
+
+            <!-- Idiomas -->
+            <div class="section">
+                <h2>Idiomas</h2>
+                <div class="content">
+                    <p>{{ $resume->languages }}</p>
+                </div>
+            </div>
         
             <!-- Pie de página -->
             <div class="footer">

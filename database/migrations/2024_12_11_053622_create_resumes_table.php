@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('education');
             $table->text('experience');
             $table->text('skills');
+            $table->text('languages');
             $table->timestamps();
         });
     }

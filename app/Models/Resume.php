@@ -17,5 +17,6 @@ class Resume extends Model
         'education', 
         'experience', 
         'skills',
+        'languages',
     ];
 }
